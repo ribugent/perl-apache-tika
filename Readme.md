@@ -1,2 +1,4 @@
 # Apache::Tika
-WIP
+WIP of my implementation to query Tika webservice
+
+Stay tuned...
