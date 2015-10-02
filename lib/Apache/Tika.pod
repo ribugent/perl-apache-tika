@@ -33,6 +33,9 @@ This module provide Apache Tika api support
 
 =item Apache::Tika->new(%options)
 
+TODO
+
+=back
 
 =head1 METHODS
 
@@ -40,18 +43,44 @@ This module provide Apache Tika api support
 
 =item $tika->meta($bytes, $contentType)
 
+TODO
+
+=back
+
+
 =over 4
 
 =item $tika->rmeta($bytes, $contentType)
+
+TODO
+
+=back
+
 
 =over 4
 
 =item $tika->tika($bytes, $contentType)
 
+TODO
+
+=back
+
+
 =over 4
 
 =item $tika->detect_stream($bytes)
 
+TODO
+
+=back
+
+
 =over 4
 
 =item $tika->language_stream($bytes)
+
+TODO
+
+=back
+
+=cut

@@ -31,38 +31,26 @@ This module provide Apache Tika api support
 
 - Apache::Tika->new(%options)
 
+    TODO
+
 # METHODS
 
 - $tika->meta($bytes, $contentType)
-    - $tika->rmeta($bytes, $contentType)
-        - $tika->tika($bytes, $contentType)
-            - $tika->detect\_stream($bytes)
-                - $tika->language\_stream($bytes)
 
-# POD ERRORS
+    TODO
 
-Hey! **The above document had some coding errors, which are explained below:**
+- $tika->rmeta($bytes, $contentType)
 
-- Around line 37:
+    TODO
 
-    You forgot a '=back' before '=head1'
+- $tika->tika($bytes, $contentType)
 
-- Around line 39:
+    TODO
 
-    &#x3d;over without closing =back
+- $tika->detect\_stream($bytes)
 
-- Around line 43:
+    TODO
 
-    &#x3d;over without closing =back
+- $tika->language\_stream($bytes)
 
-- Around line 47:
-
-    &#x3d;over without closing =back
-
-- Around line 51:
-
-    &#x3d;over without closing =back
-
-- Around line 55:
-
-    &#x3d;over without closing =back
+    TODO
