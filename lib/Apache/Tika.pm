@@ -4,6 +4,7 @@ use warnings;
 package Apache::Tika;
 
 use LWP::UserAgent;
+use JSON::MaybeXS();
 
 sub new {
 	my ($this, %pars) = @_;
@@ -11,6 +12,7 @@ sub new {
 	my $self = bless {}, $this;
 	$self->{ua} = $pars{ua} // LWP::UserAgent->new();
 	$self->{url} = $pars{url} // 'http://localhost:9998';
+	$self->{json} = JSON::MaybeXS->new();
 
 	return $self;
 }
@@ -31,16 +33,66 @@ sub _request {
 	return $response->decoded_content();
 }
 
+sub meta {
+	my ($self, $bytes, $contentType) = @_;
+	my $meta = $self->_request(
+		'put',
+		'meta',
+		{
+			'Accept' => 'application/json',
+			$contentType? ('Content-type' => $contentType) : ()
+		},
+		$bytes
+	);
+
+	return $self->{json}->decode($meta);
+}
+
+sub rmeta {
+	my ($self, $bytes, $contentType) = @_;
+	my $meta = $self->_request(
+		'put',
+		'rmeta',
+		{
+			'Accept' => 'application/json',
+			$contentType? ('Content-type' => $contentType) : ()
+		},
+		$bytes
+	);
+
+	return $self->{json}->decode($meta);
+}
+
 sub tika {
 	my ($self, $bytes, $contentType) = @_;
 	return $self->_request(
 		'put',
 		'tika',
 		{
-			'Accept-content' => 'plain/text',
+			'Accept' => 'plain/text',
 			$contentType? ('Content-type' => $contentType) : ()
 		},
 		$bytes
+	);
+}
+
+sub detect_stream {
+	my ($self, $bytes) = @_;
+	return $self->_request(
+		'put',
+		'detect/stream',
+		$bytes,
+		{'Accept' => 'plain/text'}
+	);
+}
+
+sub language_stream {
+	my ($self, $bytes) = @_;
+	return $self->_request(
+		'put',
+		'language_stream/stream',
+		$bytes,
+		{'Accept' => 'plain/text'}
 	);
 }
 
