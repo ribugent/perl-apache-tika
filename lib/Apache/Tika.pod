@@ -1,0 +1,57 @@
+=head1 NAME
+
+Apache::Tika - A perl interface to Apache Tika API
+
+=head1 SYNOPSIS
+
+ use Apache::Tika
+
+ my $tika = Apache::Tika->new();
+
+ # Extract metadata and text from a pdf file
+ open my $fh, '<:raw', '/local/file.pdf';
+ my $pdf = do { local $/; <$fh> };
+ close $fh;
+
+ my $meta = $tika->meta($pdf);
+ my $text = $tika->tika($pdf);
+
+ # Extract text from a website
+ my $response = LWP::UserAgent->get('http://some.web.site');
+ my $text = $tika->tika(
+  $r->decoded_content('charset' => 'none'),
+  $r->headers->header('content-type')
+ );
+
+=head1 DESCRIPTION
+
+This module provide Apache Tika api support
+
+=head1 CONSTRUCTOR
+
+=over 4
+
+=item Apache::Tika->new(%options)
+
+
+=head1 METHODS
+
+=over 4
+
+=item $tika->meta($bytes, $contentType)
+
+=over 4
+
+=item $tika->rmeta($bytes, $contentType)
+
+=over 4
+
+=item $tika->tika($bytes, $contentType)
+
+=over 4
+
+=item $tika->detect_stream($bytes)
+
+=over 4
+
+=item $tika->language_stream($bytes)
