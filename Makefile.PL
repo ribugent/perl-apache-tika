@@ -22,7 +22,7 @@ WriteMakefile(
 		"meta-spec" => {version => 2},
 		resources   => {
 			bugtracker => {
-				web => "https://github.com/miyagawa/cpanminus/issues"
+				web => "https://github.com/ribugent/perl-apache-tika/issues"
 			},
 			homepage   => 'https://github.com/ribugent/perl-apache-tika',
 			repository => {
