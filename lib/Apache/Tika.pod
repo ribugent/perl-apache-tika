@@ -33,54 +33,43 @@ This module provide Apache Tika api support
 
 =item Apache::Tika->new(%options)
 
-TODO
+This constructs C<Apache::Tika> object. You can specify the following options
+
+=over 4
+
+=item url
+
+Apache Tika server url (defaults to http://localhost:9998)
+
+=item ua
+
+Custom useragent
+
+=back
 
 =back
 
 =head1 METHODS
 
+The following api methods are available, to get more information about method responses visit L<http://wiki.apache.org/tika/TikaJAXRS>
+
 =over 4
 
 =item $tika->meta($bytes, $contentType)
 
-TODO
-
-=back
-
-
-=over 4
-
 =item $tika->rmeta($bytes, $contentType)
-
-TODO
-
-=back
-
-
-=over 4
 
 =item $tika->tika($bytes, $contentType)
 
-TODO
-
-=back
-
-
-=over 4
-
 =item $tika->detect_stream($bytes)
-
-TODO
-
-=back
-
-
-=over 4
 
 =item $tika->language_stream($bytes)
 
-TODO
-
 =back
+
+The $bytes parameter is always required and must contain the data to send to the server.
+The $contentType is optional, but if know the $bytes content-type (p.e. "text/html; charset=iso-8") you can send it to improve the tika response.
+
+
 
 =cut
