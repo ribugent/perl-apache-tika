@@ -21,6 +21,10 @@ WriteMakefile(
 	META_MERGE => {
 		"meta-spec" => {version => 2},
 		resources   => {
+			bugtracker => {
+				web => "https://github.com/miyagawa/cpanminus/issues"
+			},
+			homepage   => 'https://github.com/ribugent/perl-apache-tika',
 			repository => {
 				type => 'git',
 				url  => 'git://github.com/ribugent/perl-apache-tika.git',
