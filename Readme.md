@@ -55,4 +55,5 @@ The $bytes parameter is always required and must contain the data to send to the
 The $contentType is optional, but if know the $bytes content-type (p.e. "text/html; charset=iso-8") you can send it to improve the tika response.
 
 # SEE ALSO
+
 [Apache Tika](http://wiki.apache.org/tika/TikaJAXRS)
