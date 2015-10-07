@@ -13,6 +13,10 @@ WriteMakefile(
 		'LWP::UserAgent' => 0,
 		'JSON::MaybeXS'  => 0
 	},
+	TEST_REQUIRES => {
+		'Test::Compile' => 0,
+		'Test::Pod' => 0
+	},
 	META_MERGE => {
 		"meta-spec" => {version => 2},
 		resources => {
