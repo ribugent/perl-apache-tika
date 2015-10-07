@@ -5,6 +5,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
+	ABSTRACT => ' A Perl interface to the Apache Tika api',
 	NAME           => 'Apache::Tika',
 	VERSION_FROM   => 'lib/Apache/Tika.pm',
 	AUTHOR         => ['Gerard Ribugent Navarro', 'ribugent@cpan.org'],
