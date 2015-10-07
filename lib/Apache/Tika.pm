@@ -6,7 +6,7 @@ package Apache::Tika;
 use LWP::UserAgent;
 use JSON::MaybeXS();
 
-our $VERSION = '0.01_1';
+our $VERSION = '0.01';
 
 sub new {
 	my ($this, %pars) = @_;
