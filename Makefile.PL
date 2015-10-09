@@ -11,6 +11,7 @@ WriteMakefile(
 	AUTHOR       => ['Gerard Ribugent Navarro', 'ribugent@cpan.org'],
 	LICENSE      => 'gpl_2',
 	PREREQ_PM    => {
+		'Encode'         => 0,
 		'LWP::UserAgent' => 0,
 		'JSON::MaybeXS'  => 0
 	},

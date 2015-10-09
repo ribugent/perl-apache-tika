@@ -3,10 +3,11 @@ use warnings;
 
 package Apache::Tika;
 
+use Encode qw/decode_utf8/;
 use LWP::UserAgent;
 use JSON::MaybeXS();
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub new {
 	my ($this, %pars) = @_;
@@ -32,7 +33,7 @@ sub _request {
 	# Check for errors
 	# TODO
 
-	return $response->decoded_content();
+	return decode_utf8($response->decoded_content(charset => 'none'));
 }
 
 sub meta {
