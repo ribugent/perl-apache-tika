@@ -71,7 +71,7 @@ sub tika {
 		'put',
 		'tika',
 		{
-			'Accept' => 'plain/text',
+			'Accept' => 'text/plain',
 			$contentType? ('Content-type' => $contentType) : ()
 		},
 		$bytes
@@ -83,8 +83,8 @@ sub detect_stream {
 	return $self->_request(
 		'put',
 		'detect/stream',
-		$bytes,
-		{'Accept' => 'plain/text'}
+		{'Accept' => 'text/plain'},
+		$bytes
 	);
 }
 
@@ -92,9 +92,9 @@ sub language_stream {
 	my ($self, $bytes) = @_;
 	return $self->_request(
 		'put',
-		'language_stream/stream',
-		$bytes,
-		{'Accept' => 'plain/text'}
+		'language/stream',
+		{'Accept' => 'text/plain'},
+		$bytes
 	);
 }
 
