@@ -15,7 +15,7 @@ WriteMakefile(
 		'JSON::MaybeXS'  => 0
 	},
 	TEST_REQUIRES => {
-		'Test::Compile' => 0,
+		'Test::Compile' => '1.1.0',
 		'Test::Pod'     => 0
 	},
 	META_MERGE => {
