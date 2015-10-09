@@ -1,2 +1,5 @@
+2015-10-09  Gerard Ribugent <ribugent@cpan.org>
+	* Fixes to pass cpantesters tests
+
 2015-10-07  Gerard Ribugent <ribugent@cpan.org>
 	* First test cpan release
