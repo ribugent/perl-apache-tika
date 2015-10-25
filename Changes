@@ -1,3 +1,6 @@
+2015-10-25  Gerard Ribugent <ribugent@cpan.org>
+	* Remove unnecessary MYMETA.yml and MYMETA.json from distribution
+
 2015-10-09  Gerard Ribugent <ribugent@cpan.org>
 	* Fixes to pass cpantesters tests
 	* Some bugfixes

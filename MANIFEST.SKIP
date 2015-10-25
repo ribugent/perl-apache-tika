@@ -5,3 +5,5 @@ Readme.md
 pm_to_blib
 MANIFEST.bak
 Apache-Tika-.+?.tar.gz
+MYMETA\.yml
+MYMETA\.json
