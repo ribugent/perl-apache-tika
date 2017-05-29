@@ -7,7 +7,7 @@ use Encode qw/decode_utf8/;
 use LWP::UserAgent;
 use JSON::MaybeXS();
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub new {
 	my ($this, %pars) = @_;
