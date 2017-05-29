@@ -46,7 +46,7 @@ This module provide Apache Tika api support
 The following api methods are available, to get more information about method responses visit [http://wiki.apache.org/tika/TikaJAXRS](http://wiki.apache.org/tika/TikaJAXRS)
 
 - $tika->meta($bytes, $contentType)
-- $tika->rmeta($bytes, $contentType)
+- $tika->rmeta($bytes, $contentType, $format)
 - $tika->tika($bytes, $contentType)
 - $tika->detect\_stream($bytes)
 - $tika->language\_stream($bytes)
